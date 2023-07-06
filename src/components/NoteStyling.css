@@ -1,0 +1,37 @@
+.note{
+    position: relative;
+    background-color: white;
+    color:black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    margin:5px;
+    padding: 5px;
+    padding-right: 15px;
+    max-width: 300px;
+}
+
+.note-content{
+    margin-bottom: 15px;
+    max-width: 300px;
+    height: fit-content;
+    word-wrap: break-word
+}
+.note-heading{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.delete-button{
+    position: absolute;
+    background-color: white;
+    color:orange;
+    border:none;
+    font-size: 0.75em;
+    right:5px;
+    bottom:0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
