@@ -15,7 +15,8 @@
     margin-bottom: 15px;
     max-width: 300px;
     height: fit-content;
-    word-wrap: break-word
+    word-wrap: break-word;
+    padding-bottom: 5px;
 }
 .note-heading{
     margin-bottom: 5px;
@@ -30,8 +31,9 @@
     color:orange;
     border:none;
     font-size: 0.75em;
-    right:5px;
+    right:1px;
     bottom:0;
     margin-top: 10px;
     margin-bottom: 5px;
+    margin-left: 50px;
 }

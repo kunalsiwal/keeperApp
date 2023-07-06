@@ -6,20 +6,25 @@ import Notes from "./components/Notes";
 import './App.css'
 import AddNote from "./components/AddNote";
 
+
 const App=()=>{
    
 
     const [notes,setNotes]=useState([])
     const [title,setTitle]=useState('')
     const [content,setContent]=useState('')
+    const [isMouseOver,setMouseOver]=useState(false)
 
     const handleAdding=()=>{
         let newEntry={}
         newEntry['title']=title
         newEntry['content']=content
-        setNotes((prevVal)=>{
-            return [...prevVal,newEntry]
-        })
+        if(title || content){
+            setNotes((prevVal)=>{
+                return [...prevVal,newEntry]
+            })
+        }
+        
         setTitle('')
         setContent('')
     }
@@ -45,11 +50,19 @@ const App=()=>{
         })
     }
 
+    const handleMouseOver=()=>{
+        setMouseOver(true)
+    }
+
+    const handleMouseOut=()=>{
+        setMouseOver(false)
+    }
+
     return <div>
         <Header />
         <div className="add">
         <AddNote className='add-note' title={title} content={content} handleTitleChange={handleTitleChange} handleContentChange={handleContentChange}/>
-        <button className="add-button" onClick={handleAdding}>Add</button>
+        <button style={isMouseOver?{'backgroundColor':'grey','opacity':'70%'}:null} className="add-button" onClick={handleAdding} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>Add</button>
         </div>
         
         <div className="content-div">
