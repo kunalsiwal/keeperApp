@@ -5,7 +5,7 @@ function Footer(){
     currentYear=currentYear.getFullYear()
     return (
         <div className="footer">
-            <footer>Copyright {`${currentYear}`}</footer>
+            <footer>Copyright @ {`${currentYear}`}</footer>
         </div>
     )
 }
